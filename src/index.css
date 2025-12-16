@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+html,
+body,
+#root {
+	background-color: #dce6f2; /* lighter version of #dce6f2 */
+	min-height: 100%;
+	margin: 0;
+	font-family: "Baloo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* .baloo-2 {
+	font-family: "Baloo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+} */
