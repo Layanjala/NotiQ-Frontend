@@ -15,11 +15,118 @@ body,
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+
+	--main-gradient: linear-gradient(
+		135deg,
+		hsla(215, 100%, 94%, 1) 0%,
+		hsla(194, 100%, 76%, 1) 0%,
+		hsla(91, 72%, 89%, 1) 61%,
+		hsla(95, 100%, 77%, 1) 97%
+	);
+	--secondary-gradient: linear-gradient(
+		135deg,
+		hsla(215, 100%, 94%, 1) 0%,
+		hsla(194, 61%, 88%, 1) 0%,
+		hsla(91, 83%, 91%, 1) 61%,
+		hsla(57, 100%, 90%, 1) 97%
+	);
+	--emerald-gradient: linear-gradient(to bottom right, rgb(236 253 245), white);
 }
 
-/* .baloo-2 {
-	font-family: "Baloo 2", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-} */
+/* Fallback utility class to ensure CSS variable background applies */
+.bg-main-gradient {
+	background: var(--main-gradient) !important;
+}
+
+.bg-secondary-gradient {
+	background: var(--secondary-gradient) !important;
+}
+.bg-emerald-gradient {
+	background: var(--emerald-gradient) !important;
+}
+/* Pulse animations */
+@keyframes pulse-slow {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+@keyframes pulse-slower {
+	0%,
+	100% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+@keyframes soft-pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.02);
+	}
+}
+
+@keyframes pulse-once {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+/* Animation classes */
+.animate-pulse-slow {
+	animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+	animation: pulse-slower 4s ease-in-out infinite;
+}
+
+.animate-soft-pulse {
+	animation: soft-pulse 2s ease-in-out infinite;
+}
+
+.animate-pulse-once {
+	animation: pulse-once 0.5s ease-in-out;
+}
+
+.animate-fadeIn {
+	animation: fadeIn 0.8s ease-out forwards;
+}

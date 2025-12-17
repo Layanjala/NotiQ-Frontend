@@ -14,13 +14,14 @@ function Navbar() {
 		setMenuOpen(false); // close mobile menu after click
 	};
 	return (
-		<div>
-			<nav className="w-full bg-[#f9fafc] shadow">
+		<div className="bg-main-gradient">
+			{/* bg-[#91e5ff] bg-[#fffee1]/60  */}
+			<nav className=" bg-emerald-gradient w-full  z-50 mb-1 shadow-[0_10px_30px_rgba(30,64,175,0.25)] fixed">
 				<div className="flex justify-between items-center h-24 max-w-screen-xl mx-auto px-4 text-black">
-					<img src={logo} alt="Logo" className="w-20" />
+					<img src={logo} alt="Logo" className="w-30 opacity-100" />
 					{/* <h1 className="font-baloo text-1xl">This should be Baloo 2</h1> */}
 
-					<ul className="hidden md:flex space-x-6">
+					<ul className="hidden md:flex space-x-6 text-lg">
 						<li
 							className="hover:text-blue-500 cursor-pointer"
 							onClick={() => scrollToSection("home")}
