@@ -3,9 +3,12 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FiMoreVertical } from "react-icons/fi";
 import logo from "../assets/NotiQlogo.png";
 import Buttons from "./Buttons";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const navigate = useNavigate();
+
 	const scrollToSection = (id: string) => {
 		const element = document.getElementById(id);
 		if (element) {
@@ -48,10 +51,16 @@ function Navbar() {
 						</li>
 					</ul>
 					<div className="flex gap-2">
-						<Buttons variant="primary" className="opacity-50 hover:opacity-100">
+						<Buttons
+							variant="primary"
+							className="opacity-50 hover:opacity-100"
+							onClick={() => navigate("/login")}
+						>
 							Login
 						</Buttons>
-						<Buttons variant="primary">Sign Up</Buttons>
+						<Buttons variant="primary" onClick={() => navigate("/signup")}>
+							Sign Up
+						</Buttons>
 					</div>
 					<div className="md:hidden">
 						<button

@@ -1,5 +1,5 @@
 import React from "react";
-import Buttons from "./Buttons";
+import Buttons from "../components/Buttons";
 import * as FaIcons from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import bear from "../assets/BearReading.png";
@@ -258,10 +258,10 @@ function LandingSection() {
 										<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-lime-400 rounded-t-2xl"></div>
 
 										{/* Hover effect background */}
-										<div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-lime-50/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+										{/* <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-lime-50/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
 
 										{/* Icon container with enhanced styling */}
-										<div className="relative w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-white to-emerald-50 rounded-2xl p-4 shadow-md group-hover:shadow-lg transition-shadow duration-300">
+										<div>
 											<img
 												src={item.img}
 												alt={item.title}
